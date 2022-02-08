@@ -1,11 +1,11 @@
-name: ChangHyeon Nam's Blog
-url: 'https://changhyeonnam.github.io'
+name: Haesung Pyun's Blog
+url: 'https://haesungpyun.github.io'
 description: 'notes and thoughts'
 
 exclude: [Gemfile, Gemfile.lock, README.md]
 
-author: 'ChangHyeon Nam'
-disqus_shortname: Nam
+author: 'Haesung Pyun'
+disqus_shortname: Haesung
 
 future: true
 
