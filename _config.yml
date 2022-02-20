@@ -1,6 +1,6 @@
 name: Haesung Pyun's Blog
 url: 'https://haesungpyun.github.io'
-description: 'What I've done'
+description: 'What I have done'
 
 exclude: [Gemfile, Gemfile.lock, README.md]
 
