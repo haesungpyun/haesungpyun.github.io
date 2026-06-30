@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Haesung Pyun</title>
+<meta name="description" content="Haesung Pyun — Ph.D. student at the Graduate School of Data Science, Seoul National University. I am interested in long-term conversational systems, generation quality, reliability, and utterance diversity." />
+
+<!-- social sharing preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Haesung Pyun" />
+<meta property="og:description" content="Ph.D. student at SNU GSDS, interested in long-term conversational systems, generation quality, reliability, and utterance diversity." />
+<meta property="og:url" content="https://haesungpyun.github.io/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Haesung Pyun" />
+<meta name="twitter:description" content="Ph.D. student at SNU GSDS, interested in long-term conversational systems, generation quality, reliability, and utterance diversity." />
+
+<!-- favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='%232B34D9'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root{
+    --paper:   #F5F6F8;
+    --surface: #FFFFFF;
+    --ink:     #14161C;
+    --ink-2:   #2A2E38;
+    --muted:   #565B68;
+    --faint:   #898E9C;
+    --line:    #E3E6ED;
+    --accent:  #2B34D9;
+    --accent-soft: rgba(43,52,217,0.07);
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans:  "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono:  "JetBrains Mono", ui-monospace, monospace;
+
+    --maxw: 840px;
+    --pad: 30px;
+  }
+
+  html{ scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink-2);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a{ color: inherit; }
+  ::selection{ background: var(--accent); color:#fff; }
+
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* ---------- top bar ---------- */
+  header.bar{
+    position: sticky; top:0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 85%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease;
+  }
+  header.bar.scrolled{ border-bottom-color: var(--line); }
+  .bar-inner{
+    max-width: var(--maxw); margin:0 auto; padding: 14px var(--pad);
+    display:flex; align-items:center; justify-content:space-between; gap: 18px;
+  }
+  .brand{
+    font-family: var(--sans); font-size: 15px; font-weight: 600;
+    letter-spacing: -0.01em; color: var(--ink); text-decoration: none; white-space: nowrap;
+  }
+  nav.anchors{
+    display:flex; gap: 2px; overflow-x: auto; scrollbar-width: none;
+    -ms-overflow-style: none; margin: -6px 0; padding: 6px 0;
+  }
+  nav.anchors::-webkit-scrollbar{ display:none; }
+  nav.anchors a{
+    font-family: var(--sans); font-size: 14.5px; font-weight: 500; color: var(--muted);
+    text-decoration: none; padding: 5px 11px; border-radius: 8px;
+    white-space: nowrap; transition: color .15s ease, background .15s ease;
+  }
+  nav.anchors a:hover{ color: var(--ink); background: var(--accent-soft); }
+
+  /* ---------- hero ---------- */
+  .hero{ padding: 72px 0 44px; }
+  h1.name{
+    font-family: var(--serif); font-weight: 600;
+    font-size: clamp(2.7rem, 6.2vw, 3.9rem);
+    line-height: 1.04; letter-spacing: -0.012em; color: var(--ink); margin: 0 0 24px;
+  }
+  .links{ display:flex; flex-wrap:wrap; gap: 9px; }
+  .links a{
+    font-family: var(--sans); font-size: 14px; font-weight: 500; text-decoration:none;
+    color: var(--ink); border: 1px solid var(--line); background: var(--surface);
+    padding: 8px 14px; border-radius: 999px;
+    display:inline-flex; align-items:center; gap: 8px;
+    transition: border-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .links a:hover{ border-color: var(--accent); color: var(--accent); transform: translateY(-1px); box-shadow: 0 6px 16px -10px rgba(43,52,217,.5); }
+  .links a svg{ width: 15px; height: 15px; flex: none; }
+  .links a .arr{ color: var(--faint); transition: transform .15s ease; }
+  .links a:hover .arr{ transform: translate(2px,-2px); color: var(--accent); }
+
+  /* ---------- sections ---------- */
+  section.block{ padding: 50px 0; border-top: 1px solid var(--line); }
+  .sec-head{ display:flex; align-items:baseline; gap: 14px; margin: 0 0 28px; flex-wrap: wrap; }
+  .sec-head h2{
+    font-family: var(--serif); font-weight: 600; font-size: 1.7rem;
+    letter-spacing: -0.01em; color: var(--ink); margin:0;
+  }
+  .sec-head .tag{
+    font-family: var(--sans); font-size: 12px; font-weight: 600; color: var(--faint);
+    letter-spacing: .06em; text-transform: uppercase;
+  }
+
+  .prose p{ margin: 0 0 18px; max-width: 66ch; color: var(--ink-2); }
+  #about .prose p{ max-width: 100%; }
+  .prose p:last-child{ margin-bottom: 0; }
+  .prose em{ font-style: italic; color: var(--ink); }
+  .prose a.inline, .row a.inline{ color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: border-color .15s; }
+  .prose a.inline:hover, .row a.inline:hover{ border-bottom-color: var(--accent); }
+
+  /* ---------- publications ---------- */
+  .pub{ display:grid; grid-template-columns: 104px 1fr; gap: 22px; padding: 24px 0; border-top: 1px dashed var(--line); }
+  .pub:first-of-type{ border-top: none; padding-top: 0; }
+  .pub-rail{ padding-top: 3px; }
+  .venue{
+    font-family: var(--mono); font-size: 11px; font-weight: 500;
+    display:inline-block; padding: 3px 8px; border-radius: 6px;
+    letter-spacing: .01em; line-height: 1.5; white-space: nowrap;
+  }
+  .venue.top{ background: var(--accent-soft); color: var(--accent); }
+  .venue.ws { background: #ECEEF2; color: var(--muted); }
+  .pub-year{ font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--faint); margin-top: 8px; }
+
+  .pub-title{
+    font-family: var(--serif); font-weight: 600; font-size: 1.24rem;
+    line-height: 1.32; letter-spacing: -0.005em; margin: 0 0 7px; color: var(--ink);
+  }
+  .pub-title a{
+    color: var(--ink); text-decoration: none;
+    background-image: linear-gradient(var(--accent),var(--accent));
+    background-size: 0% 1.5px; background-repeat:no-repeat; background-position: 0 100%;
+    transition: background-size .25s ease, color .15s ease; padding-bottom: 2px;
+  }
+  .pub-title a:hover{ color: var(--accent); background-size: 100% 1.5px; }
+  .authors{ font-size: 15px; color: var(--muted); margin: 0 0 12px; line-height: 1.5; }
+  .authors.sub{ margin: -6px 0 12px; font-size: 13.5px; color: var(--faint); }
+  .authors .me{ color: var(--ink); font-weight: 600; }
+  .authors .star{ color: var(--accent); }
+
+  .chips{ display:flex; flex-wrap:wrap; gap: 7px; }
+  .chips a{
+    font-family: var(--sans); font-size: 13px; font-weight: 500; text-decoration:none;
+    color: var(--muted); border: 1px solid var(--line); border-radius: 7px;
+    padding: 4px 11px; display:inline-flex; align-items:center; gap: 6px;
+    transition: all .15s ease;
+  }
+  .chips a:hover{ color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+
+  .footnote{ font-family: var(--sans); font-size: 13px; font-style: italic; color: var(--faint); margin-top: 22px; }
+  .footnote .star{ color: var(--accent); font-style: normal; }
+
+  /* ---------- behind-the-paper toggle ---------- */
+  .more{ margin-top: 15px; }
+  .more > summary{
+    list-style: none; cursor: pointer; width: fit-content;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: .01em;
+    color: var(--accent); transition: opacity .15s ease;
+  }
+  .more > summary::-webkit-details-marker{ display: none; }
+  .more > summary .chev{ font-size: 10px; transition: transform .2s ease; }
+  .more[open] > summary .chev{ transform: rotate(90deg); }
+  .more > summary:hover{ opacity: .72; }
+  .more-body{
+    margin-top: 15px; padding: 2px 0 2px 20px;
+    border-left: 2px solid var(--accent-soft);
+    display: grid; gap: 17px;
+  }
+  .more-body h4{
+    margin: 0 0 5px; font-family: var(--sans); font-size: 11px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+  }
+  .more-body p{ margin: 0; font-size: 15px; line-height: 1.62; color: var(--ink-2); max-width: 62ch; }
+  .more-body p em{ font-style: italic; color: var(--ink); }
+  .more-body .draft{ color: var(--faint); font-style: italic; }
+  @media (prefers-reduced-motion: no-preference){
+    .more[open] .more-body{ animation: moreIn .35s ease; }
+    @keyframes moreIn{ from{ opacity: 0; transform: translateY(-4px); } to{ opacity: 1; transform: none; } }
+  }
+
+  /* ---------- list rows ---------- */
+  .rows{ display:flex; flex-direction:column; }
+  .row{ display:grid; grid-template-columns: 1fr auto; gap: 14px 24px; padding: 18px 0; border-top: 1px dashed var(--line); align-items:baseline; }
+  .row:first-child{ border-top:none; padding-top: 0; }
+  .row .r-main{ font-size: 16.5px; color: var(--ink); }
+  .row .r-main strong{ font-weight: 600; }
+  .row .r-main .r-sub{ color: var(--muted); font-size: 14.5px; font-weight: 400; display:block; margin-top: 3px; }
+  .row .r-meta{ font-family: var(--sans); font-size: 13.5px; font-weight: 500; color: var(--faint); white-space: nowrap; text-align: right; }
+
+  /* ---------- footer ---------- */
+  footer{ border-top: 1px solid var(--line); padding: 38px 0 64px; }
+  .foot-inner{ display:flex; align-items:center; justify-content:space-between; gap: 16px; flex-wrap: wrap; }
+  .foot-inner .l{ font-family: var(--sans); font-size: 13.5px; color: var(--faint); }
+  .foot-inner a{ font-family: var(--sans); font-size: 13.5px; font-weight: 500; color: var(--muted); text-decoration:none; }
+  .foot-inner a:hover{ color: var(--accent); }
+
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+  /* ---------- load-in ---------- */
+  .reveal{ opacity: 0; transform: translateY(10px); }
+  body.in .reveal{ animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  body.in .reveal.d1{ animation-delay: .04s; }
+  body.in .reveal.d2{ animation-delay: .12s; }
+  body.in .reveal.d3{ animation-delay: .20s; }
+  body.in .reveal.d4{ animation-delay: .28s; }
+  @keyframes rise{ to{ opacity:1; transform: none; } }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; }
+    body.in .reveal{ animation: none; }
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 720px){
+    :root{ --pad: 22px; }
+    .hero{ padding: 48px 0 34px; }
+    nav.anchors{ display:none; }
+    .pub{ grid-template-columns: 1fr; gap: 13px; }
+    .pub-rail{ display:flex; align-items:center; gap: 10px; padding-top: 0; }
+    .pub-year{ margin-top: 0; }
+    .row{ grid-template-columns: 1fr; gap: 4px; }
+    .row .r-meta{ text-align: left; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="bar" id="bar">
+  <div class="bar-inner">
+    <a href="#top" class="brand">Haesung Pyun</a>
+    <nav class="anchors" aria-label="Sections">
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#awards">Awards</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <h1 class="name reveal d2">Haesung Pyun</h1>
+    <div class="links reveal d4">
+      <a href="mailto:haesung.pyun@snu.ac.kr">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Email
+      </a>
+      <a href="https://scholar.google.com/citations?user=579DDnAAAAAJ&hl=ko" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 8l11 5 9-4.09V14h2V8L12 3zM5 13.18v3.5L12 20l7-3.32v-3.5L12 16.5z"/></svg>
+        Google Scholar <span class="arr">↗</span>
+      </a>
+      <a href="https://github.com/haesungpyun" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        GitHub <span class="arr">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== INTRO ===================== -->
+  <section class="block" id="about">
+    <div class="prose">
+      <p>I'm a Ph.D. student at the Graduate School of Data Science, Seoul National University, advised by <a class="inline" href="https://yohanjo.github.io/" target="_blank" rel="noopener">Prof. Yohan Jo</a>.</p>
+      <p>I am interested in building conversational systems that deeply understand a person, stay with them over time, and exchange thoughts with them. Building such systems requires multiple lines of work, including interlocutor modeling, utterance diversity, generation quality and reliability, and evaluation without a single correct answer. Among these, I am especially interested in improving generation quality and reliability. More concretely, my work analyzes the gap between a model's reachable upper bound and its actual performance, and seeks to narrow that gap. In in-context learning, I studied what becomes reachable under a given set of examples and improved example selection accordingly. In generation, I analyzed the gap between what a model already has internally and what it actually outputs, then narrowed it by aligning internal representations. Going forward, I plan to study utterance diversity.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PUBLICATIONS ===================== -->
+  <section class="block" id="publications">
+    <div class="sec-head"><h2>Publications</h2><span class="tag">2025 –</span></div>
+
+    <!-- 1 -->
+    <article class="pub">
+      <div class="pub-rail">
+        <span class="venue top">ICML 2026</span>
+        <div class="pub-year">2026</div>
+      </div>
+      <div class="pub-body">
+        <h3 class="pub-title"><a href="https://arxiv.org/abs/2509.23782" target="_blank" rel="noopener">Bridging the Knowledge-Prediction Gap in LLMs on Multiple-Choice Questions</a></h3>
+        <p class="authors">Yoonah Park<span class="star">*</span>, <span class="me">Haesung Pyun<span class="star">*</span></span>, Yohan Jo</p>
+        <div class="chips">
+          <a href="https://arxiv.org/abs/2509.23782" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://openreview.net/forum?id=I0RgZXTO53" target="_blank" rel="noopener">OpenReview</a>
+        </div>
+        <details class="more">
+          <summary><span class="chev">&#9656;</span> Behind the paper</summary>
+          <div class="more-body">
+            <div>
+              <h4>In plain terms</h4>
+              <p>On a multiple-choice question, a model can hold the correct answer in its hidden states and still pick the wrong option — what it knows and what it answers come apart. We trace this to the residual stream: in some layers a small subspace carries two directions, one for what the model knows and one for what it will answer, and wrong answers show up when those two fall out of alignment. KAPPA is a lightweight inference-time intervention that nudges the prediction direction back toward the knowledge direction — closing much of the gap, and carrying over to free-form generation too.</p>
+            </div>
+            <div>
+              <h4>How it came together</h4>
+              <p>It started as a simple swap — instead of feeding in-context examples through the prompt, what if we pulled vectors from the model's internal representations and injected them directly? Steering had mostly been shown on style and behavior, so the real question was whether it could move something harder: the reasoning and knowledge a task actually needs. It wouldn't budge for free-form generation — only when we narrowed to a binary choice and projected the vectors did a usable signal appear. My part was turning that into a method: formalizing KAPPA, implementing it, and running the generalization and baseline experiments to see how far it held.</p>
+            </div>
+            <div>
+              <h4>The part I keep coming back to</h4>
+              <p>Once the method worked, the question that pulled me in was whether the gap we were claiming is actually real — a genuine phenomenon, or an artifact of our own probe and framing. So I shifted from method to analysis: testing the gap against standard methods and the model's actual geometry, cross-validating it, and closing the soft spots in training a probe. That's where my interest moved toward the geometry of representations and what models commit to in their outputs — which is most of what I work on now.</p>
+            </div>
+            <div>
+              <h4>What it changed in how I work</h4>
+              <p>On this paper the writing got more deliberate. Beyond keeping the logic sound, I started building everything around motivation — opening from a broad phenomenon, narrowing down, and threading it through the method, the analysis, and the conclusion so it stays visible the whole way. I got almost fixated on the first paragraph of the introduction, and the three-part way the paper tells its story grew out of that. It's the layer of craft I lean on most now.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="pub">
+      <div class="pub-rail">
+        <span class="venue top">ACL 2026</span>
+        <div class="pub-year">2026</div>
+      </div>
+      <div class="pub-body">
+        <h3 class="pub-title"><a href="https://arxiv.org/abs/2510.07248" target="_blank" rel="noopener">Don't Adapt Small Language Models for Tools; Adapt Tool Schemas to the Models</a></h3>
+        <p class="authors">Jonggeun Lee, Woojung Song, Jongwook Han, <span class="me">Haesung Pyun</span>, Yohan Jo</p>
+        <div class="chips">
+          <a href="https://arxiv.org/abs/2510.07248" target="_blank" rel="noopener">arXiv</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="pub">
+      <div class="pub-rail">
+        <span class="venue ws">ICML 2026 · WS</span>
+        <div class="pub-year">2026</div>
+      </div>
+      <div class="pub-body">
+        <h3 class="pub-title"><a href="https://openreview.net/forum?id=U7tkXcVkV3" target="_blank" rel="noopener">SHAPE of Chain-of-Thought in Math Reasoning</a></h3>
+        <p class="authors">Jonghyun Song, Sangjun Song, Minjae Oh, <span class="me">Haesung Pyun</span>, SungSik Lee, Yohan Jo</p>
+        <p class="authors sub">AI for Math Workshop @ ICML 2026</p>
+        <div class="chips">
+          <a href="https://openreview.net/forum?id=U7tkXcVkV3" target="_blank" rel="noopener">OpenReview</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="pub">
+      <div class="pub-rail">
+        <span class="venue top">ACL 2025</span>
+        <div class="pub-year">2025</div>
+      </div>
+      <div class="pub-body">
+        <h3 class="pub-title"><a href="https://aclanthology.org/2025.acl-long.1393/" target="_blank" rel="noopener">Improving Dialogue State Tracking through Combinatorial Search for In-Context Examples</a></h3>
+        <p class="authors"><span class="me">Haesung Pyun</span>, Yoonah Park, Yohan Jo</p>
+        <div class="chips">
+          <a href="https://aclanthology.org/2025.acl-long.1393/" target="_blank" rel="noopener">Paper</a>
+          <a href="https://drive.google.com/file/d/1rmfnwYZEFIsL2oJ_LvJSBrtEZSBP4a4u/view" target="_blank" rel="noopener">Video</a>
+          <a href="https://drive.google.com/file/d/17XOKFDTJt9tC2hnryrx_C0eYH6BAPjhj/view" target="_blank" rel="noopener">Poster</a>
+        </div>
+        <details class="more">
+          <summary><span class="chev">&#9656;</span> Behind the paper</summary>
+          <div class="more-body">
+            <div>
+              <h4>In plain terms</h4>
+              <p>To track what a user wants across a conversation, you can show a language model a few solved dialogues to imitate. Most methods pick those examples one at a time, by similarity — but examples work as a <em>set</em>, and the best individuals rarely make the best team. CombiSearch searches over <em>combinations</em> of examples, keeps the sets that actually help the model get the state right, and trains the retriever on those. It matches stronger systems with about 20&times; less data, and reveals how much accuracy ordinary similarity retrieval quietly leaves on the table.</p>
+            </div>
+            <div>
+              <h4>How it came together</h4>
+              <p>It began as a diagnostic: I compared what different retrievers actually pull — how similar or distinct their examples are — and looked at what happens if you keep only the examples that recur when the model predicts correctly. The cases that kept failing pulled me into a full error analysis — reading wrong DST predictions one at a time and writing a rule-based taxonomy over whether each slot and value was present, predicted, or missing. That's what turned the question from &ldquo;retrieve similar examples&rdquo; into &ldquo;what makes an example good at all?&rdquo;</p>
+            </div>
+            <div>
+              <h4>The part I keep coming back to</h4>
+              <p>The piece I'm fondest of is the oracle analysis — measuring how well DST can do when the in-context examples are genuinely good and no retrieval errors get in the way, then comparing that against a retriever trained on those same examples. The gap is wide, which is really a measure of how much room ordinary retrieval gives up. It's the part that reframed the whole paper for me.</p>
+            </div>
+            <div>
+              <h4>What it changed in how I work</h4>
+              <p>Most of what stuck from my first paper wasn't about DST — it was about writing. I stopped drafting straight into English; now I outline the logic in Korean until it holds, then translate and flesh it out, which keeps &ldquo;is the argument sound&rdquo; separate from &ldquo;does it read well.&rdquo; I also stopped trying to include every true detail, and started leading with the point instead of building up to it — habits I've used on everything since.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <p class="footnote"><span class="star">*</span> Equal contribution</p>
+  </section>
+
+  <!-- ===================== TEACHING ===================== -->
+  <section class="block" id="teaching">
+    <div class="sec-head"><h2>Teaching</h2><span class="tag">Teaching Assistant</span></div>
+    <div class="rows">
+      <div class="row">
+        <div class="r-main"><strong>Computing for Data Science 1</strong><span class="r-sub">Graduate School of Data Science, Seoul National University</span></div>
+        <div class="r-meta">Spring 2026</div>
+      </div>
+      <div class="row">
+        <div class="r-main"><strong>Conversational AI</strong><span class="r-sub">Graduate School of Data Science, Seoul National University</span></div>
+        <div class="r-meta">Fall 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE ===================== -->
+  <section class="block" id="service">
+    <div class="sec-head"><h2>Service</h2><span class="tag">Reviewing</span></div>
+    <div class="rows">
+      <div class="row">
+        <div class="r-main"><strong>Reviewer</strong><span class="r-sub"><a class="inline" href="https://pluralistic-alignment.github.io/" target="_blank" rel="noopener">Pluralistic Alignment Workshop @ ICML 2026</a></span></div>
+        <div class="r-meta">2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AWARDS + EDUCATION ===================== -->
+  <section class="block" id="awards">
+    <div class="sec-head"><h2>Awards &amp; Education</h2><span class="tag">Selected</span></div>
+    <div class="rows">
+      <div class="row">
+        <div class="r-main"><strong>National Research Foundation of Korea (NRF) Fellowship</strong><span class="r-sub">Graduate research fellowship · 2-year award</span></div>
+        <div class="r-meta">2024 – 2026</div>
+      </div>
+      <div class="row">
+        <div class="r-main"><strong>Ph.D. in Data Science</strong><span class="r-sub">Graduate School of Data Science, Seoul National University</span></div>
+        <div class="r-meta">Present</div>
+      </div>
+      <div class="row">
+        <div class="r-main"><strong>B.S. in Electronic Engineering</strong><span class="r-sub">Hanyang University · Summa Cum Laude</span></div>
+        <div class="r-meta">2017 – 2023</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <span class="l">© <span id="yr">2026</span> Haesung Pyun · Seoul, Korea</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function(){
+    requestAnimationFrame(function(){ document.body.classList.add('in'); });
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var bar = document.getElementById('bar');
+  var onScroll = function(){ bar.classList.toggle('scrolled', window.scrollY > 8); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+
+</body>
+</html>
