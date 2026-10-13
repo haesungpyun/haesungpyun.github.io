@@ -1,0 +1,103 @@
+%PDF-1.4
+%ABCD
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.276 841.89] /Resources << /Font << /F4 4 0 R /F5 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 7251 >>
+stream
+0.086 0.125 0.169 rg BT /F5 21.00 Tf 1 0 0 1 47.00 785.00 Tm (Haesung Pyun) Tj ET
+0.322 0.373 0.431 rg BT /F4 10.00 Tf 1 0 0 1 47.00 766.00 Tm (Ph.D. Student in Data Science  |  Language Model Behavior & Reliability) Tj ET
+0.137 0.322 0.455 rg BT /F4 8.90 Tf 1 0 0 1 47.00 748.00 Tm (haesung.pyun@snu.ac.kr   |   Website   |   GitHub   |   Google Scholar) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.50 Tf 1 0 0 1 474.56 748.00 Tm (Seoul, South Korea) Tj ET
+0.820 0.859 0.886 RG 0.65 w 47.00 735.00 m 548.28 735.00 l S
+0.137 0.322 0.455 rg BT /F5 9.30 Tf 1 0 0 1 47.00 708.00 Tm (RESEARCH FOCUS) Tj ET
+0.820 0.859 0.886 RG 0.65 w 156.75 711.00 m 548.28 711.00 l S
+0.086 0.125 0.169 rg BT /F4 9.00 Tf 1 0 0 1 47.00 689.00 Tm (I study why information available within language models does not always guide their predictions, and how to diagnose and) Tj ET
+0.086 0.125 0.169 rg BT /F4 9.00 Tf 1 0 0 1 47.00 676.70 Tm (reduce this gap. I am interested in extending this work toward reliable evaluation, uncertainty-aware prediction, and sequential) Tj ET
+0.086 0.125 0.169 rg BT /F4 9.00 Tf 1 0 0 1 47.00 664.40 Tm (decision-making for adaptive AI systems.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.30 Tf 1 0 0 1 47.00 640.10 Tm (EDUCATION) Tj ET
+0.820 0.859 0.886 RG 0.65 w 122.15 643.10 m 548.28 643.10 l S
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 621.10 Tm (Seoul National University) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 428.32 621.10 Tm (Sep 2023 - Aug 2028 \(expected\)) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.80 Tf 1 0 0 1 47.00 605.10 Tm (Ph.D. in Data Science, Graduate School of Data Science | Advisor: Yohan Jo) Tj ET
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 584.10 Tm (Hanyang University) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 503.98 584.10 Tm (2017 - 2023) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.80 Tf 1 0 0 1 47.00 568.10 Tm (B.S. in Electronic Engineering, Magna Cum Laude) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.30 Tf 1 0 0 1 47.00 543.10 Tm (RESEARCH EXPERIENCE) Tj ET
+0.820 0.859 0.886 RG 0.65 w 186.34 546.10 m 548.28 546.10 l S
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 524.10 Tm (Seoul National University | Ph.D. Researcher) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 493.84 524.10 Tm (2023 - Present) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 508.10 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 508.10 Tm (KAPPA \(ICML 2026, co-first author\). Analyzed failures where correct-answer signals are linearly decodable from LLM hidden) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 496.70 Tm (representations but predictions are incorrect; characterized the gap via residual-stream probes and geometry.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 480.30 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 480.30 Tm (Co-developed a parameter-free inference-time intervention to align model predictions with latent knowledge; improved) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 468.90 Tm (four-choice TruthfulQA accuracy from 56.7% to 73.5% on Llama 3.1 8B and tested generalization to free-form answers.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 452.50 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 452.50 Tm (CombiSearch \(ACL 2025, first author\). Designed combinatorial in-context example selection for dialogue state tracking; achieved) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 441.10 Tm (20x training-data efficiency and a 12-percentage-point improvement in oracle upper-bound DST performance.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 424.70 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 424.70 Tm (PA-Tool \(ACL 2026, co-author\). Investigated model/tool-schema mismatch and contributed SFT-based validation of a) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 413.30 Tm (training-free approach that adapts tool schemas to pretrained model knowledge.) Tj ET
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 390.90 Tm (SNU | Structure & Knowledge Injection into ML Lab) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 491.99 390.90 Tm (Jan - Aug 2023) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 374.90 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 374.90 Tm (SEAL-SSL. Explored energy-based objectives for semi-supervised learning; implemented knowledge distillation, REINFORCE,) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 363.50 Tm (and task adaptation.) Tj ET
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 343.10 Tm (SNU | Machine Intelligence Laboratory) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 491.08 343.10 Tm (Mar - Dec 2022) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 327.10 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 327.10 Tm (Developed multi-view intent induction with clustering and multitask learning; contributed to DSTC11 Workshop research.) Tj ET
+0.086 0.125 0.169 rg BT /F5 9.25 Tf 1 0 0 1 47.00 306.70 Tm (KIST | AI Research Center) Tj ET
+0.322 0.373 0.431 rg BT /F4 8.30 Tf 1 0 0 1 470.31 306.70 Tm (Dec 2021 - Feb 2022) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 290.70 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.53 Tf 1 0 0 1 60.00 290.70 Tm (Implemented recommender models and evaluated a tourism recommendation prototype through A/B testing and user feedback.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.30 Tf 1 0 0 1 47.00 264.30 Tm (SELECTED PUBLICATIONS) Tj ET
+0.820 0.859 0.886 RG 0.65 w 192.49 267.30 m 548.28 267.30 l S
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 245.30 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 245.30 Tm (Y. Park*, H. Pyun*, Y. Jo. Bridging the Knowledge-Prediction Gap in LLMs on Multiple-Choice Questions. ICML 2026. \(* Equal) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 234.00 Tm (contribution\)) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 219.70 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 219.70 Tm (H. Pyun, Y. Park, Y. Jo. Improving Dialogue State Tracking through Combinatorial Search for In-Context Examples. ACL 2025.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 205.40 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 205.40 Tm (J. Lee, W. Song, J. Han, H. Pyun, Y. Jo. Don't Adapt Small Language Models for Tools; Adapt Tool Schemas to the Models. ACL) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 194.10 Tm (2026.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.00 Tf 1 0 0 1 50.00 179.80 Tm (-) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.38 Tf 1 0 0 1 60.00 179.80 Tm (J. Song, S. Song, M. Oh, H. Pyun, S. Lee, Y. Jo. SHAPE of Chain-of-Thought in Math Reasoning. ICML 2026 Workshop.) Tj ET
+0.137 0.322 0.455 rg BT /F5 9.30 Tf 1 0 0 1 47.00 161.50 Tm (HONORS, TEACHING & SERVICE) Tj ET
+0.820 0.859 0.886 RG 0.65 w 220.94 164.50 m 548.28 164.50 l S
+0.086 0.125 0.169 rg BT /F4 8.35 Tf 1 0 0 1 47.00 142.50 Tm (NRF Graduate Research Fellowship \(2-year award\) | Teaching: Computing for Data Science 1 \(2026\), Conversational AI \(2024\) |) Tj ET
+0.086 0.125 0.169 rg BT /F4 8.35 Tf 1 0 0 1 47.00 131.00 Tm (Service: Reviewer, Pluralistic Alignment Workshop @ ICML 2026.) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Title (Haesung Pyun - 2027 Student Researcher Research CV) /Author (Haesung Pyun) /Subject (Language Model Reliability Research CV) >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000264 00000 n 
+0000000334 00000 n 
+0000000409 00000 n 
+0000007711 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R /Info 7 0 R >>
+startxref
+7865
+%%EOF
